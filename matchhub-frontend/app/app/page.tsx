@@ -71,18 +71,34 @@ export default function Page() {
         <Card>
           <CardHeader>
             <CardTitle>My Mentors</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-            <CardAction>Card Action</CardAction>
+            <CardDescription>View my current mentors</CardDescription>
+            <CardAction>Find mentor</CardAction>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <p>Darius Wong</p>
           </CardContent>
           <CardFooter>
-            <p>Card Footer</p>
+            <p>Daniel Zhou</p>
+          </CardFooter>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>My Interests/CCAs</CardTitle>
+            <CardDescription>View my current interests/CCAs</CardDescription>
+            <CardAction>Update interests/CCAs</CardAction>
+          </CardHeader>
+          <CardContent>
+            <p>Ultimate Frisbee</p>
+          </CardContent>
+          <CardFooter>
+            <p>Tchoukball</p>
           </CardFooter>
         </Card>
       </div>
-      <Card>
+
+      {/*
+      <Card> 
         <CardHeader>
           <CardTitle>Card Title</CardTitle>
           <CardDescription>Card Description</CardDescription>
@@ -92,9 +108,11 @@ export default function Page() {
           <p>Card Content</p>
         </CardContent>
         <CardFooter>
-          <p>Card Footer</p>
+          <p>Card Content</p>
         </CardFooter>
-      </Card>    </div>
+      </Card>
+      */}    
+    </div>
   </>
   )
 }
