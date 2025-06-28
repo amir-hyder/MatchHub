@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -19,8 +21,15 @@ import { Separator } from "@/components/ui/separator"
 import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { useEffect, useState } from "react"
 
 export default function Page() {
+  const [courses, setCourses] = useState<string[]>([])
+
+  useEffect(() => {
+    setCourses(["CS2030S", "CS2040S"])
+  }, [courses])
+
   return (<>
     <header className="flex h-16 shrink-0 items-center gap-2">
       <div className="flex items-center gap-2 px-4">
@@ -52,12 +61,11 @@ export default function Page() {
             <CardDescription>View my current courses</CardDescription>
             <CardAction>Update courses</CardAction>
           </CardHeader>
-          <CardContent>
-            <p>CS2030S</p>
-          </CardContent>
-          <CardFooter>
-            <p>CS2040S</p>
-          </CardFooter>
+          {courses.map((course => {
+            return <CardContent>
+              <p>{course}</p>
+            </CardContent>
+          }))}
         </Card>
 
         <Card>
