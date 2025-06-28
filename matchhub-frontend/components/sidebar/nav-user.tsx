@@ -6,7 +6,7 @@ import {
     ChevronsUpDown,
     CreditCard,
     LogOut,
-    Sparkles,
+    Settings,
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import {
@@ -29,12 +29,12 @@ import {
     SidebarMenuItem,
     useSidebar,
 } from "@/components/ui/sidebar"
-import { PublicUser, useAuth } from "@/context/auth-context"
+import { useAuth } from "@/context/auth-context"
 
 export function NavUser({
     user,
 }: {
-    user: PublicUser
+    user: any
 }) {
     const { isMobile } = useSidebar()
     const { signOut } = useAuth();
@@ -81,18 +81,11 @@ export function NavUser({
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
                             <DropdownMenuItem>
-                                <Sparkles />
-                                Upgrade to Pro
-                            </DropdownMenuItem>
-                        </DropdownMenuGroup>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuGroup>
-                            <DropdownMenuItem>
                                 <BadgeCheck />
                                 Account
                             </DropdownMenuItem>
                             <DropdownMenuItem onClick={() => { router.push('/app/change-password') }}>
-                                <CreditCard />
+                                <Settings />
                                 Change password
                             </DropdownMenuItem>
                             <DropdownMenuItem>

@@ -6,6 +6,15 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import {
   SidebarTrigger,
@@ -37,12 +46,47 @@ export default function Page() {
     </header>
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
       <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-        <div className="bg-muted/50 aspect-video rounded-xl" />
-        <div className="bg-muted/50 aspect-video rounded-xl" />
-        <div className="bg-muted/50 aspect-video rounded-xl" />
+        <Card>
+          <CardHeader>
+            <CardTitle>My Courses</CardTitle>
+            <CardDescription>View my current courses</CardDescription>
+            <CardAction>Update courses</CardAction>
+          </CardHeader>
+          <CardContent>
+            <p>CS2030S</p>
+          </CardContent>
+          <CardFooter>
+            <p>CS2040S</p>
+          </CardFooter>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>My Mentors</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+            <CardAction>Card Action</CardAction>
+          </CardHeader>
+          <CardContent>
+            <p>Card Content</p>
+          </CardContent>
+          <CardFooter>
+            <p>Card Footer</p>
+          </CardFooter>
+        </Card>
       </div>
-      <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
-    </div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+          <CardAction>Card Action</CardAction>
+        </CardHeader>
+        <CardContent>
+          <p>Card Content</p>
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+      </Card>    </div>
   </>
   )
 }

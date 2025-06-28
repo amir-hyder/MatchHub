@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import {
+    Home,
     BookOpen,
     Bot,
     GalleryVerticalEnd,
@@ -25,72 +26,38 @@ import { useAuth } from "@/context/auth-context"
 
 // This is sample data.
 const data = {
-    user: {
-        name: "shadcn",
-        email: "m@example.com",
-        avatar: "/avatars/shadcn.jpg",
-    },
     navMain: [
         {
-            title: "Playground",
-            url: "#",
-            icon: SquareTerminal,
-            isActive: true,
-            items: [
-                {
-                    title: "History",
-                    url: "#",
-                },
-                {
-                    title: "Starred",
-                    url: "#",
-                },
-                {
-                    title: "Settings",
-                    url: "#",
-                },
-            ],
+            title: "Home",
+            url: "/app",
+            icon: Home,
         },
         {
-            title: "Models",
+            title: "My Info",
             url: "#",
             icon: Bot,
             items: [
                 {
-                    title: "Genesis",
-                    url: "#",
-                },
-                {
-                    title: "Explorer",
-                    url: "#",
-                },
-                {
-                    title: "Quantum",
+                    title: "My Courses",
                     url: "#",
                 },
             ],
         },
         {
-            title: "Documentation",
-            url: "#",
-            icon: BookOpen,
+            title: "Mentors",
+            url: "/app",
+            icon: SquareTerminal,
+            isActive: true,
             items: [
                 {
-                    title: "Introduction",
+                    title: "View Matches",
                     url: "#",
                 },
                 {
-                    title: "Get Started",
+                    title: "Mentors Available",
                     url: "#",
                 },
-                {
-                    title: "Tutorials",
-                    url: "#",
-                },
-                {
-                    title: "Changelog",
-                    url: "#",
-                },
+
             ],
         },
         {
