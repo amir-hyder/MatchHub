@@ -24,11 +24,27 @@ import {
 import { useEffect, useState } from "react"
 
 export default function Page() {
+  /* Dynamic for courses */
   const [courses, setCourses] = useState<string[]>([])
 
   useEffect(() => {
     setCourses(["CS2030S", "CS2040S"])
   }, [courses])
+
+  /* Dynamic for mentors */
+  const [mentors, setMentors] = useState<string[]>([])
+
+  useEffect(() => {
+    setMentors(["Darius Wong", "DanielZhou"])
+  }, [mentors])
+
+  /* Dynamic for interests/CCAs */
+  const [interests, setInterests] = useState<string[]>([])
+
+  useEffect(() => {
+    setInterests(["Ultimate Frisbee", "Tchoukball"])
+  }, [interests])
+  
 
   return (<>
     <header className="flex h-16 shrink-0 items-center gap-2">
@@ -62,7 +78,7 @@ export default function Page() {
             <CardAction>Update courses</CardAction>
           </CardHeader>
           {courses.map((course => {
-            return <CardContent>
+            return <CardContent key={course}>
               <p>{course}</p>
             </CardContent>
           }))}
@@ -74,12 +90,11 @@ export default function Page() {
             <CardDescription>View my current mentors</CardDescription>
             <CardAction>Find mentor</CardAction>
           </CardHeader>
-          <CardContent>
-            <p>Darius Wong</p>
-          </CardContent>
-          <CardFooter>
-            <p>Daniel Zhou</p>
-          </CardFooter>
+          {mentors.map((mentor => {
+            return <CardContent key={mentor}>
+              <p>{mentor}</p>
+            </CardContent>
+          }))}
         </Card>
 
         <Card>
@@ -88,12 +103,11 @@ export default function Page() {
             <CardDescription>View my current interests/CCAs</CardDescription>
             <CardAction>Update interests/CCAs</CardAction>
           </CardHeader>
-          <CardContent>
-            <p>Ultimate Frisbee</p>
-          </CardContent>
-          <CardFooter>
-            <p>Tchoukball</p>
-          </CardFooter>
+          {interests.map((interest => {
+            return <CardContent key={interest}>
+              <p>{interest}</p>
+            </CardContent>
+          }))}
         </Card>
       </div>
 

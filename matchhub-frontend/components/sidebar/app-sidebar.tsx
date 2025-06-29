@@ -41,6 +41,18 @@ const data = {
                     title: "My Courses",
                     url: "#",
                 },
+                {
+                    title: "My Mentors",
+                    url: "#",
+                },
+                {
+                    title: "My Interests",
+                    url: "#",
+                },
+                {
+                    title: "My CCAs",
+                    url: "#",
+                },
             ],
         },
         {
@@ -57,6 +69,10 @@ const data = {
                     title: "Mentors Available",
                     url: "#",
                 },
+                {
+                    title: "Apply for Mentorship",
+                    url: "#",
+                }
 
             ],
         },
