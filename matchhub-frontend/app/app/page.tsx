@@ -21,29 +21,36 @@ import { Separator } from "@/components/ui/separator"
 import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+/* import { Link } from "lucide-react" */
 import { useEffect, useState } from "react"
+import Link from "next/link"
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+
 
 export default function Page() {
+  const router = useRouter();
+
   /* Dynamic for courses */
   const [courses, setCourses] = useState<string[]>([])
 
   useEffect(() => {
     setCourses(["CS2030S", "CS2040S"])
-  }, [courses])
+  }, [])
 
   /* Dynamic for mentors */
   const [mentors, setMentors] = useState<string[]>([])
 
   useEffect(() => {
-    setMentors(["Darius Wong", "DanielZhou"])
-  }, [mentors])
+    setMentors(["Darius Wong", "Daniel Zhou"])
+  }, [])
 
   /* Dynamic for interests/CCAs */
   const [interests, setInterests] = useState<string[]>([])
 
   useEffect(() => {
     setInterests(["Ultimate Frisbee", "Tchoukball"])
-  }, [interests])
+  }, [])
   
 
   return (<>
@@ -58,12 +65,8 @@ export default function Page() {
           <BreadcrumbList>
             <BreadcrumbItem className="hidden md:block">
               <BreadcrumbLink href="#">
-                Building Your Application
+                Home
               </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="hidden md:block" />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Data Fetching</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -83,12 +86,16 @@ export default function Page() {
             </CardContent>
           }))}
         </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>My Mentors</CardTitle>
-            <CardDescription>View my current mentors</CardDescription>
-            <CardAction>Find mentor</CardAction>
+        
+        <Card className="cursor-pointer hover:shadow-lg">
+          <CardHeader className="flex flex-row items-start justify-between">
+            <div>
+              <CardTitle>My Mentors</CardTitle>
+              <CardDescription>View my current mentors</CardDescription>
+            </div>  
+            <Button className="ml-auto" onClick={() => router.push("/app/mentorpage")}>
+              Find mentor
+            </Button>
           </CardHeader>
           {mentors.map((mentor => {
             return <CardContent key={mentor}>

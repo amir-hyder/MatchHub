@@ -63,11 +63,11 @@ const data = {
             items: [
                 {
                     title: "View Matches",
-                    url: "#",
+                    url: "/app/mentorpage/matchespage",
                 },
                 {
                     title: "Mentors Available",
-                    url: "#",
+                    url: "/app/mentorpage/availablementorpage",
                 },
                 {
                     title: "Apply for Mentorship",
