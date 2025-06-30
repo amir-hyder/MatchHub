@@ -39,7 +39,7 @@ const data = {
       items: [
         {
           title: "My Courses",
-          url: "#",
+          url: "/app/courses-page/",
         },
         {
           title: "My Interests/CCAs",
@@ -51,7 +51,6 @@ const data = {
       title: "Mentors",
       url: "/app",
       icon: SquareTerminal,
-      isActive: true,
       items: [
         {
           title: "View Matches",
@@ -102,7 +101,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <GalleryVerticalEnd className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium">Documentation</span>
+                  <span className="font-medium">MatchHub</span>
                   <span className="">v1.0.0</span>
                 </div>
               </Link>
