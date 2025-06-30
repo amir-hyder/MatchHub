@@ -24,8 +24,6 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 /* import { Link } from "lucide-react" */
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
 
 export default function Page() {
   const router = useRouter();
@@ -75,7 +73,15 @@ export default function Page() {
             <CardHeader>
               <CardTitle>My Courses</CardTitle>
               <CardDescription>View my current courses</CardDescription>
-              <CardAction>Update courses</CardAction>
+              {/* Button on the right */}
+              <div className="ml-auto">
+                <Button
+                  size="sm"
+                  onClick={() => router.push("/app/courses-page/")}
+                >
+                  Update courses
+                </Button>
+              </div>
             </CardHeader>
             {courses.map((course) => {
               return (

@@ -26,81 +26,6 @@ import { useAuth } from "@/context/auth-context";
 
 // This is sample data.
 const data = {
-    navMain: [
-        {
-            title: "Home",
-            url: "/app",
-            icon: Home,
-        },
-        {
-            title: "My Info",
-            url: "#",
-            icon: Bot,
-            items: [
-                {
-                    title: "My Courses",
-                    url: "#",
-                },
-                {
-                    title: "My Mentors",
-                    url: "#",
-                },
-                {
-                    title: "My Interests",
-                    url: "#",
-                },
-                {
-                    title: "My CCAs",
-                    url: "#",
-                },
-            ],
-        },
-        {
-            title: "Mentors",
-            url: "/app",
-            icon: SquareTerminal,
-            isActive: true,
-            items: [
-                {
-                    title: "View Matches",
-                    url: "/app/mentorpage/matchespage",
-                },
-                {
-                    title: "Mentors Available",
-                    url: "/app/mentorpage/availablementorpage",
-                },
-                {
-                    title: "Apply for Mentorship",
-                    url: "#",
-                }
-
-            ],
-        },
-        {
-            title: "Settings",
-            url: "#",
-            icon: Settings2,
-            items: [
-                {
-                    title: "General",
-                    url: "#",
-                },
-                {
-                    title: "Team",
-                    url: "#",
-                },
-                {
-                    title: "Billing",
-                    url: "#",
-                },
-                {
-                    title: "Limits",
-                    url: "#",
-                },
-            ],
-        },
-    ],
-}
   navMain: [
     {
       title: "Home",
@@ -114,10 +39,18 @@ const data = {
       items: [
         {
           title: "My Courses",
-          url: "/app/courses-page/",
+          url: "/app/courses-page",
         },
         {
-          title: "My Interests/CCAs",
+          title: "My Mentors",
+          url: "#",
+        },
+        {
+          title: "My Interests",
+          url: "#",
+        },
+        {
+          title: "My CCAs",
           url: "#",
         },
       ],
@@ -126,13 +59,18 @@ const data = {
       title: "Mentors",
       url: "/app",
       icon: SquareTerminal,
+      isActive: true,
       items: [
         {
           title: "View Matches",
-          url: "#",
+          url: "/app/mentorpage/matchespage",
         },
         {
           title: "Mentors Available",
+          url: "/app/mentorpage/availablementorpage",
+        },
+        {
+          title: "Apply for Mentorship",
           url: "#",
         },
       ],
